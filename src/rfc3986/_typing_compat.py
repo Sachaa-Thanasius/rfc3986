@@ -3,11 +3,11 @@ import typing as t
 
 __all__ = ("Self",)
 
-if sys.version_info >= (3, 11):  # pragma: no cover
+if sys.version_info >= (3, 11):  # pragma: >=3.11 cover
     from typing import Self
 elif t.TYPE_CHECKING:
     from typing_extensions import Self
-else:  # pragma: no cover
+else:  # pragma: <3.11 cover
 
     class _PlaceholderMeta(type):
         # This is meant to make it easier to debug the presence of placeholder

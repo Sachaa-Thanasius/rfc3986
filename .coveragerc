@@ -1,8 +1,15 @@
+[run]
+plugins = covdefaults
+source =
+    rfc3986
+    tests
+omit =
+    tests/verify_types.py
+
+[paths]
+rfc3988 = src
+tests = tests
+
 [report]
-exclude_lines =
-    .* # Python \d.*
-    .* # nocov: Python \d.*
-    .* # pragma: no cover.*
+exclude_also =
     ^\s*(?:el)?if t\.TYPE_CHECKING:$
-    ^ +\.\.\.$
-fail_under = 100

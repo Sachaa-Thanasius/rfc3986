@@ -1,5 +1,3 @@
-import sys
-
 import pytest
 
 import rfc3986
@@ -7,7 +5,7 @@ from rfc3986.exceptions import InvalidAuthority
 
 try:
     import idna
-except ImportError:
+except ImportError:  # pragma: no cover
     idna = None
 
 
